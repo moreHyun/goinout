@@ -1,0 +1,64 @@
+
+.goinout_join {
+    font-size: 26px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 26px;
+    color: #313131;
+}
+
+#wrapper form {
+    display: flex;
+    justify-content: center;
+}
+
+#user_info {
+    list-style-type: none;
+}
+
+#user_info li {
+    display: flex;
+    flex-direction: column;
+}
+
+#user_info li > input {
+    font-size: 18px;
+    font-weight: 100;
+    padding: 5px 10px;
+    width: 650px;
+    height: 40px;
+    border: 1px solid #FFE5D9;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+#user_info li > label {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #313131;
+}
+
+#user_info li > span {
+    margin-bottom: 26px;
+    color: #9D8189;
+}
+
+#user_info li > button {
+    font-size: 18px;
+    font-weight: 100;
+    padding: 5px 10px;
+    height: 50px;
+    border: 1px solid #FFE5D9;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    background-color: #FFE5D9;
+}
+
+#join_terms {
+    text-decoration: none; /* 링크에 밑줄 제거 */
+    color: #F4ACB7; /* 부모 요소의 글꼴 색상 상속 */
+    cursor: pointer; /* 포인터 커서 설정 */
+    font-size: inherit;
+}

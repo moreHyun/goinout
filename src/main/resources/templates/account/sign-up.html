@@ -2,9 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/templates/js/join.js"></script>
+    <link rel="stylesheet" href="/templates/style/main.css">
+    <link rel="stylesheet" href="/templates/style/join.css">
+    <title>Goinout > 회원가입</title>
 </head>
+<header>
+    <div class="goinout_nav">
+        <div class="goinout_logo">
+            <a href="#">GoinOut</a>
+            <form class="search_box_nav" action="" method="get">
+                <input class="search_input" type="text" name="" placeholder="Search">
+            </form>
+        </div>
+        <div class="goinout_login">
+            <a href="#" class="login_box">로그인</a>
+            <a href="#" class="join_box">가입</a>
+        </div>
+    </div>
+</header>
 <body>
-Sign Up Page
+<div id="wrapper">
+    <a class="goinout_join">회원가입</a>
+    <form action="#" id="join">
+        <ul id="user_info">
+            <li>
+                <label class="field">닉네임</label>
+                <input type="text" id="user_nickname" required>
+                <span id="nickname_message">공백없이 문자와 숫자로만 3자 이상 20자 이내로 입력하세요. 가입 후에 변경할 수 있습니다.</span>
+            </li>
+            <li>
+                <label class="field">이메일</label>
+                <input type="email" id="user_email" required onblur="validateEmail()">
+                <span id="email_message">비밀번호 찾기 시 메일 수신이 가능한 이메일을 입력하세요.</span>
+            </li>
+            <li>
+                <label class="field">패스워드</label>
+                <input type="password" id="user_pwd1" required onblur="validatePassword()">
+                <span id="pwd1_message">영문, 숫자, 특수기호를 사용하여 8자 이상 20자 이내로 입력하세요. 공백은 사용할 수 없습니다.</span>
+            </li>
+            <li>
+                <label class="field">패스워드 확인</label>
+                <input type="password" id="user_pwd2" required onblur="checkPasswords()">
+                <span id="password_match_message">입력한 비밀번호를 한번 더 입력해 주세요.</span>
+            </li>
+            <li>
+                <button type="submit" class="join_btn">가입하기</button>
+                <span><a id="join_terms" href="#">약관</a>에 동의하시면 가입하기 버튼을 클릭하세요.</span>
+            </li>
+        </ul>
+
+    </form>
+</div>
+
+<footer>
+    <span class="goinout_footer"><a href="#">ⓒ GoinOut</a></span>
+</footer>
+
 </body>
 </html>
