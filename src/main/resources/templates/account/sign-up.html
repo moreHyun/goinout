@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="/templates/js/join.js"></script>
-    <link rel="stylesheet" href="/templates/style/main.css">
-    <link rel="stylesheet" href="/templates/style/join.css">
+    <script type="text/javascript" src="/js/join.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/join.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
     <title>Goinout > 회원가입</title>
 </head>
+
 <header>
     <div class="goinout_nav">
         <div class="goinout_logo">
@@ -27,11 +29,11 @@
 <body>
 <div id="wrapper">
     <a class="goinout_join">회원가입</a>
-    <form action="#" id="join">
+    <form id="join" action="#">
         <ul id="user_info">
             <li>
-                <label class="field">닉네임</label>
-                <input type="text" id="user_nickname" required>
+                <label class="field" for="user_nickname">닉네임</label>
+                <input type="text" id="user_nickname" field="nickname" required>
                 <span id="nickname_message">공백없이 문자와 숫자로만 3자 이상 20자 이내로 입력하세요. 가입 후에 변경할 수 있습니다.</span>
             </li>
             <li>
@@ -58,9 +60,7 @@
     </form>
 </div>
 
-<footer>
-    <span class="goinout_footer"><a href="#">ⓒ GoinOut</a></span>
-</footer>
+<!--<div th:replace="/footer.html"></div>-->
 
 </body>
 </html>
